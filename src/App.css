@@ -1,0 +1,262 @@
+html {
+  background-color: #111
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  display: center block;
+  height: 120px;
+  padding: 0px;
+}
+
+.App-header {
+  background-color: #111;
+  height: 150px;
+  margin-top: 5px;
+  margin-bottom: 55px;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+}
+
+h2 {
+  font-size: 3.25rem;
+  text-shadow: 1px 2px 20px #990099, 1px 2px 50px #4dffc3;
+  margin: 3px;
+}
+
+.board {
+  display: flex;
+  width: 600px;
+  height: 600px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  user-select: none;
+  margin: auto
+}
+
+.square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:150px;
+  width: 150px;
+  box-sizing: border-box;
+  border: 5px dotted #05ffa1;
+  border-color: #4dffc3;
+  font-family: 'Noto Sans', sans-serif;
+  color: white;
+  text-shadow: .25px .25px 50px #990099;
+  font-size: 7em;
+  user-select: none
+}
+
+.square:hover {
+  cursor: pointer;
+  background-color: #990099
+}
+
+.config {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  margin: 10px
+}
+
+label {
+  /*display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;*/
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  text-shadow: .25px .25px 75px #ddd;
+  color: #990099
+}
+
+input {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: .75rem;
+  text-align: center;
+  background-color: #333;
+  color: #4dffc3;
+  margin-left: 15px
+}
+
+#ready {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: .75rem;
+  background-color: #111;
+  color: #ddd;
+  padding: 10px;
+  margin:10px;
+}
+
+.results {
+  font-family: 'Noto Sans', sans-serif;
+  text-shadow: 1.5px 1.5px 7px #990099, 1.5px 1.5px 10px #4dffc3;
+  color: white
+}
+
+#reset {
+  background-color: #111;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: .75rem;
+  color: white;
+  padding: 10px;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : landscape) {
+  .App-logo {
+    height: 0px;
+  }
+
+  .App-header {
+    height: 38px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 184px;
+    height: 184px;
+    margin-top: 10px
+  }
+
+  .square {
+    height:46px;
+    width: 46px;
+    font-size: 2em;
+  }
+
+  .config {
+    margin: 0px
+  }
+
+  label {
+    display:inline;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .6rem;
+    text-shadow: .25px .25px 75px #ddd;
+    color: #990099
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .4rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-left: 5px
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .5rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 2px 3px;
+    margin: 0px;
+  }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait) {
+  .App-logo {
+    height: 75px;
+  }
+
+  .App-header {
+    height: 58px;
+    margin-top: 45px;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 1px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 224px;
+    height: 184px;
+    margin-top: 75px;
+    margin-bottom: 40px
+  }
+
+  .square {
+    height:56px;
+    width: 56px;
+    font-size: 2em;
+  }
+
+  .config {
+    margin-top: 45px
+  }
+
+  label {
+    display:inline;
+    font-size: .75rem;
+    margin-top: 15px
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .6rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .75rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 2px 3px;
+    margin: 10px;
+  }
+
+  .results {
+    font-size: .55rem;
+    margin-top: 57px;
+  }
+
+  #reset {
+    font-size: .75rem;
+    padding: 5px;
+    margin-top: 5px
+  }
+
+}
