@@ -26,12 +26,12 @@ class Config extends Component {
     }
   }
 
-  setPlayerAmount(num) {
+  setPlayerAmount() {
     var pTotal = document.getElementById('playerAmount')
     var numOfPlayers = pTotal.value
 
     if (numOfPlayers === '1' || numOfPlayers === '2') {
-      this.props.setTotalPlayers(num)
+      this.props.setTotalPlayers(numOfPlayers)
     } else {
       alert('ENTER 1 OR 2')
     }
@@ -44,7 +44,7 @@ class Config extends Component {
           <div className='config'>
             <div className='player-set'>
               <label htmlFor='playerAmount' id='total-players'>
-                How many players?
+                HOW MANY HUMAN CONTESTANTS?
               </label>
               <input
                 id='playerAmount'
@@ -52,17 +52,16 @@ class Config extends Component {
                 type='text'
                 min='1'
                 size='1'
-                defaultValue='1/2'
               />
               <button id='amount-btn' onClick={this.setPlayerAmount}>
-                CONFIRM PLAYERS 
+                CONFIRM  
               </button>
             </div>
           </div>
         </div>
       )
     }
-    if (this.props.symbolsSet === 'no' && this.props.totalPlayers !== 0) {
+    if (this.props.symbolsSet === 'no' && this.props.totalPlayers !== '0') {
       return (
         <div className='row'>
           <div className='config'>

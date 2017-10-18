@@ -91,6 +91,7 @@ class App extends Component {
         <Header />
 
         <Board
+          totalPlayers={this.state.totalPlayers}
           board={this.state.board}
           player1symbol={this.state.player1symbol}
           player2symbol={this.state.player2symbol}
