@@ -11,8 +11,6 @@ class Board extends Component {
 
     // Click logic for Two-Player game
     if (this.props.totalPlayers === '2') {
-
-    
       if (this.props.board[index] === this.props.player1symbol ||
         this.props.board[index] === this.props.player2symbol ||
         this.props.gameOver === 'yes' ||
