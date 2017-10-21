@@ -21,11 +21,13 @@ class App extends Component {
       board: [
         '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       ],
+      turnCounter: 1,
     }
     this.setTotalPlayers = this.setTotalPlayers.bind(this)
     this.setConfig = this.setConfig.bind(this)
     this.start = this.start.bind(this)
     this.mark = this.mark.bind(this)
+    this.mark1P = this.mark1P.bind(this)
     this.wingame = this.wingame.bind(this)
     this.tiegame = this.tiegame.bind(this)
     this.getInitialState = this.getInitialState.bind(this)
@@ -59,6 +61,13 @@ class App extends Component {
     })
   }
 
+  mark1P() {
+    this.setState({
+      board: this.state.board,
+      turnCounter: this.state.turnCounter++,
+    })
+  }
+
   wingame() {
     this.setState({
       gameOver: 'yes',
@@ -82,6 +91,7 @@ class App extends Component {
       board: [
         '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       ],
+      turnCounter: 1,
     })
   }
 
@@ -97,7 +107,9 @@ class App extends Component {
           player2symbol={this.state.player2symbol}
           active={this.state.active}
           gameOver={this.state.gameOver}
+          turnCounter={this.state.turnCounter}
           mark={this.mark}
+          mark1P={this.mark1P}
           wingame={this.wingame}
           tiegame={this.tiegame}
         />

@@ -54,7 +54,7 @@ class Config extends Component {
                 size='1'
               />
               <button id='amount-btn' onClick={this.setPlayerAmount}>
-                CONFIRM  
+                CONFIRM
               </button>
             </div>
           </div>
