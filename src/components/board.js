@@ -43,7 +43,7 @@ class Board extends Component {
           let count1 = []
           let count2 = []
           for (let arr in matchedArrays) {
-            for (let i in arr) {
+            for (let i in matchedArrays[arr]) {
               if (this.props.board[i] === this.props.player1symbol) {
                 count1.push(1)
               }
@@ -64,7 +64,7 @@ class Board extends Component {
             this.props.mark1P()
             console.log('turn count ' + this.props.turnCounter)
           } else {
-          CPU_MOVE()
+            CPU_MOVE()
           }
         } else if (this.props.turnCounter <= 6) {
           let matchedArrays = []
@@ -78,7 +78,7 @@ class Board extends Component {
           let count1 = []
           let count2 = []
           for (let arr in matchedArrays) {
-            for (let i in arr) {
+            for (let i in matchedArrays[arr]) {
               if (this.props.board[i] === this.props.player1symbol) {
                 count1.push(1)
               }
@@ -137,7 +137,7 @@ class Board extends Component {
             CPU_MOVE()
           }
         }
-      } 
+      }
     }
 
     let isItOver = () => {
