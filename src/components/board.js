@@ -29,9 +29,7 @@ class Board extends Component {
         this.props.board[randNum] = this.props.player2symbol
         this.props.mark1P()
         console.log('turn count ' + this.props.turnCounter)
-      }
-
-      if (this.props.board[randNum] === '') {
+      } else if (this.props.board[randNum] === '') {
         if (this.props.turnCounter <= 4) {
           let matchedArrays = []
           // Get matching arrays
@@ -131,7 +129,7 @@ class Board extends Component {
             return sum + val
           }, 0)
           console.log('hc : ' + heatCheckerP200 + ' / ' + heatCheckerP100)
-          if (heatCheckerP100 > 2 || heatCheckerP200 > 2) {
+          if (heatCheckerP100 >= 2 || heatCheckerP200 >= 2) {
             this.props.board[randNum] = this.props.player2symbol
             this.props.mark1P()
             console.log('turn count ' + this.props.turnCounter)
