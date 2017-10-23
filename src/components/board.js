@@ -20,13 +20,126 @@ class Board extends Component {
     let CPU_MOVE = () => {
       let randNum = Math.floor(Math.random() * 16)
       console.log(randNum)
-      if (this.props.board[randNum] === '') {
+
+      if (this.props.board[randNum] !== '') {
+        CPU_MOVE()
+      }
+
+      if (this.props.board[randNum] === '' && this.props.turnCounter <= 3) {
         this.props.board[randNum] = this.props.player2symbol
         this.props.mark1P()
         console.log('turn count ' + this.props.turnCounter)
-      } else {
-        CPU_MOVE()
       }
+
+      if (this.props.board[randNum] === '') {
+        if (this.props.turnCounter <= 4) {
+          let matchedArrays = []
+          // Get matching arrays
+          for (let arr in winningArrays) {
+            if (winningArrays[arr].includes(randNum)) {
+              matchedArrays.push(winningArrays[arr])
+            }
+          }
+          console.log(matchedArrays)
+          // See how many cells in those arrays are marked and by whom
+          let count1 = []
+          let count2 = []
+          for (let arr in matchedArrays) {
+            for (let i in arr) {
+              if (this.props.board[i] === this.props.player1symbol) {
+                count1.push(1)
+              }
+              if (this.props.board[i] === this.props.player2symbol) {
+                count2.push(1)
+              }
+            }
+          }
+          let heatCheckerP1 = count1.reduce((sum, val) => {
+            return sum + val
+          }, 0)
+          let heatCheckerP2 = count2.reduce((sum, val) => {
+            return sum + val
+          }, 0)
+          console.log('hc: ' + heatCheckerP2 + ' / ' + heatCheckerP1)
+          if (heatCheckerP1 > 0 || heatCheckerP2 > 0) {
+            this.props.board[randNum] = this.props.player2symbol
+            this.props.mark1P()
+            console.log('turn count ' + this.props.turnCounter)
+          } else {
+          CPU_MOVE()
+          }
+        } else if (this.props.turnCounter <= 6) {
+          let matchedArrays = []
+          for (let arr in winningArrays) {
+            if (winningArrays[arr].includes(randNum)) {
+              matchedArrays.push(winningArrays[arr])
+            }
+          }
+          console.log(matchedArrays)
+          // See how many cells in those arrays are marked and by whom
+          let count1 = []
+          let count2 = []
+          for (let arr in matchedArrays) {
+            for (let i in arr) {
+              if (this.props.board[i] === this.props.player1symbol) {
+                count1.push(1)
+              }
+              if (this.props.board[i] === this.props.player2symbol) {
+                count2.push(1)
+              }
+            }
+          }
+          let heatCheckerP10 = count1.reduce((sum, val) => {
+            return sum + val
+          }, 0)
+          let heatCheckerP20 = count2.reduce((sum, val) => {
+            return sum + val
+          }, 0)
+          console.log('hc : ' + heatCheckerP20 + ' / ' + heatCheckerP10)
+          if (heatCheckerP10 > 1 || heatCheckerP20 > 1) {
+            this.props.board[randNum] = this.props.player2symbol
+            this.props.mark1P()
+            console.log('turn count ' + this.props.turnCounter)
+          } else {
+            CPU_MOVE()
+          }
+        } else if (this.props.turnCounter > 6) {
+          let matchedArrays = []
+          for (let arr in winningArrays) {
+            if (winningArrays[arr].includes(randNum)) {
+              matchedArrays.push(winningArrays[arr])
+            }
+          }
+          console.log(matchedArrays)
+          // See how many cells in those arrays are marked and by whom
+          let count1 = []
+          let count2 = []
+          for (let arr in matchedArrays) {
+            for (let i in arr) {
+              if (this.props.board[i] === this.props.player1symbol) {
+                count1.push(1)
+              }
+              if (this.props.board[i] === this.props.player2symbol) {
+                count2.push(1)
+              }
+            }
+          }
+          let heatCheckerP100= count1.reduce((sum, val) => {
+            return sum + val
+          }, 0)
+          let heatCheckerP200 = count2.reduce((sum, val) => {
+            return sum + val
+          }, 0)
+          console.log('hc : ' + heatCheckerP200 + ' / ' + heatCheckerP100)
+          if (heatCheckerP100 > 2 || heatCheckerP200 > 2) {
+            this.props.board[randNum] = this.props.player2symbol
+            this.props.mark1P()
+            console.log('turn count ' + this.props.turnCounter)
+          } else {
+            CPU_MOVE()
+          }
+        }
+      } 
     }
 
     let isItOver = () => {

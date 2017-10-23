@@ -63,7 +63,7 @@ class App extends Component {
   mark1P() {
     this.setState({
       board: this.state.board,
-      turnCounter: this.state.turnCounter++,
+      turnCounter: this.state.turnCounter++ ,
     })
   }
 
