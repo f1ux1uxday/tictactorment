@@ -17,6 +17,7 @@ class Board extends Component {
       [3, 6, 9, 12],
     ]
 
+
     let CPU_MOVE = () => {
       let randNum = Math.floor(Math.random() * 16)
       console.log(randNum)
@@ -87,14 +88,14 @@ class Board extends Component {
               }
             }
           }
-          let heatCheckerP10 = count1.reduce((sum, val) => {
+          let heatCheckerP1 = count1.reduce((sum, val) => {
             return sum + val
           }, 0)
-          let heatCheckerP20 = count2.reduce((sum, val) => {
+          let heatCheckerP2 = count2.reduce((sum, val) => {
             return sum + val
           }, 0)
-          console.log('hc : ' + heatCheckerP20 + ' / ' + heatCheckerP10)
-          if (heatCheckerP10 > 1 || heatCheckerP20 > 1) {
+          console.log('hc : ' + heatCheckerP2 + ' / ' + heatCheckerP1)
+          if (heatCheckerP1 > 1 || heatCheckerP2 > 1) {
             this.props.board[randNum] = this.props.player2symbol
             this.props.mark1P()
             console.log('turn count ' + this.props.turnCounter)
@@ -113,7 +114,7 @@ class Board extends Component {
           let count1 = []
           let count2 = []
           for (let arr in matchedArrays) {
-            for (let i in arr) {
+            for (let i in matchedArrays[arr]) {
               if (this.props.board[i] === this.props.player1symbol) {
                 count1.push(1)
               }
@@ -122,14 +123,14 @@ class Board extends Component {
               }
             }
           }
-          let heatCheckerP100 = count1.reduce((sum, val) => {
+          let heatCheckerP1 = count1.reduce((sum, val) => {
             return sum + val
           }, 0)
-          let heatCheckerP200 = count2.reduce((sum, val) => {
+          let heatCheckerP2 = count2.reduce((sum, val) => {
             return sum + val
           }, 0)
-          console.log('hc : ' + heatCheckerP200 + ' / ' + heatCheckerP100)
-          if (heatCheckerP100 >= 2 || heatCheckerP200 >= 2) {
+          console.log('hc : ' + heatCheckerP2 + ' / ' + heatCheckerP1)
+          if (heatCheckerP1 >= 2 || heatCheckerP2 >= 2) {
             this.props.board[randNum] = this.props.player2symbol
             this.props.mark1P()
             console.log('turn count ' + this.props.turnCounter)
@@ -137,6 +138,35 @@ class Board extends Component {
             CPU_MOVE()
           }
         }
+      }
+    }
+
+    let checkForDanger = () => {
+      let blockCell = []
+      for (let combo in winningArrays) {
+        let P1symbols = 0
+        let emptyCells = 0
+        for (let i in winningArrays[combo]) {
+          if (this.props.board[i] === this.props.player1symbol) {
+            P1symbols++
+          }
+          if (this.props.board[i] === '') {
+            emptyCells++
+            blockCell.push(i)
+          }
+          if (P1symbols === 3 && emptyCells === 1) {
+            this.props.board[blockCell] = this.props.player2symbol
+          }
+        }
+        // if (P1symbols === 3 && winningArrays[combo].includes('')) {
+          // blockCell.push(winningArrays[combo].indexOf(''))
+        // }
+      }
+      if (blockCell.length !== 0) {
+        this.props.board[blockCell] = this.props.player2symbol
+        this.props.mark1P()
+      } else {
+        CPU_MOVE()
       }
     }
 
@@ -221,7 +251,7 @@ class Board extends Component {
           this.props.mark1P()
           console.log('turn count: ' + this.props.turnCounter)
           // Mark cell and switch active player
-          CPU_MOVE()
+          checkForDanger()
           isItOver()
         }
       }
