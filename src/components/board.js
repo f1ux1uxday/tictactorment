@@ -122,7 +122,7 @@ class Board extends Component {
               }
             }
           }
-          let heatCheckerP100= count1.reduce((sum, val) => {
+          let heatCheckerP100 = count1.reduce((sum, val) => {
             return sum + val
           }, 0)
           let heatCheckerP200 = count2.reduce((sum, val) => {
