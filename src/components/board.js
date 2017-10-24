@@ -17,7 +17,6 @@ class Board extends Component {
       [3, 6, 9, 12],
     ]
 
-
     let CPU_MOVE = () => {
       let randNum = Math.floor(Math.random() * 16)
       console.log(randNum)
@@ -142,28 +141,34 @@ class Board extends Component {
     }
 
     let checkForDanger = () => {
-      let blockCell = []
+      let blockCell = 0
+      let marked = false
       for (let combo in winningArrays) {
         let P1symbols = 0
         let emptyCells = 0
+        let emptyIndex = 0
         for (let i in winningArrays[combo]) {
-          if (this.props.board[i] === this.props.player1symbol) {
+          let q = winningArrays[combo][i]
+          if (this.props.board[q] === this.props.player1symbol) {
             P1symbols++
           }
-          if (this.props.board[i] === '') {
+          if (this.props.board[q] === '') {
             emptyCells++
+            emptyIndex = q
           }
           if (P1symbols === 3 && emptyCells === 1) {
+            blockCell = emptyIndex
             this.props.board[blockCell] = this.props.player2symbol
+            this.props.mark1P()
+            marked = true
           }
         }
         // if (P1symbols === 3 && winningArrays[combo].includes('')) {
           // blockCell.push(winningArrays[combo].indexOf(''))
         // }
       }
-      if (blockCell.length !== 0) {
-        this.props.board[blockCell] = this.props.player2symbol
-        this.props.mark1P()
+      if (marked === true) {
+        return
       } else {
         CPU_MOVE()
       }
