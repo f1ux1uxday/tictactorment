@@ -152,7 +152,6 @@ class Board extends Component {
           }
           if (this.props.board[i] === '') {
             emptyCells++
-            blockCell.push(i)
           }
           if (P1symbols === 3 && emptyCells === 1) {
             this.props.board[blockCell] = this.props.player2symbol
