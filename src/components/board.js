@@ -29,13 +29,13 @@ class Board extends Component {
         this.props.board[randNum] = this.props.player2symbol
         this.props.mark1P()
       } else if (this.props.board[randNum] === '') {
-        if (this.props.turnCounter <= 4) {
+        if (this.props.turnCounter < 5) {
           // On fourth turn, find out where the action is
           let matchedArrays = []
           // Get winning arrays that include our random number
-          for (let arr in winningArrays) {
-            if (winningArrays[arr].includes(randNum)) {
-              matchedArrays.push(winningArrays[arr])
+          for (let combo in winningArrays) {
+            if (winningArrays[combo].includes(randNum)) {
+              matchedArrays.push(winningArrays[combo])
             }
           }
           // See how many cells in those arrays are marked and by whom
@@ -65,15 +65,18 @@ class Board extends Component {
           if (heatCheckerP1 > 0 || heatCheckerP2 > 0) {
             this.props.board[randNum] = this.props.player2symbol
             this.props.mark1P()
+          } else if (heatCheckerP1 > -1 || heatCheckerP2 > -1) {
+            this.props.board[randNum] = this.props.player2symbol
+            this.props.mark1P()
           } else {
             checkForHeat()
           }
         } else if (this.props.turnCounter >= 5) {
           // From the fifth term on...
           let matchedArrays = []
-          for (let arr in winningArrays) {
-            if (winningArrays[arr].includes(randNum)) {
-              matchedArrays.push(winningArrays[arr])
+          for (let combo in winningArrays) {
+            if (winningArrays[combo].includes(randNum)) {
+              matchedArrays.push(winningArrays[combo])
             }
           }
           let count1 = []
@@ -143,10 +146,10 @@ class Board extends Component {
         }
       }
       // If danger not found, check for heat
-      if (marked === true) {
-        return
-      } else {
+      if (marked !== true) {
         checkForHeat()
+      } else {
+        return
       }
     }
 
@@ -205,7 +208,6 @@ class Board extends Component {
         this.props.tiegame()
       }
     }
-
     // Click logic for One-Player game
     if (this.props.totalPlayers === '1') {
       if (this.props.active === this.props.player1symbol) {

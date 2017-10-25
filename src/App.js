@@ -126,8 +126,6 @@ class App extends Component {
           getInitialState={this.getInitialState}
         />
 
-
-
       </div>
     );
   }
@@ -135,6 +133,3 @@ class App extends Component {
 
 export default App;
 
-// <Results
-//  gameOver = {this.state.gameOver}
-// />
