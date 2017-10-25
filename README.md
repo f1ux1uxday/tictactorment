@@ -1,4 +1,4 @@
-# ******TIC TAC TORMENT
+# TIC TAC TORMENT
 
 ## A grueling 4x4 challenge for one or two contestants. Go beyond X and O.
 
