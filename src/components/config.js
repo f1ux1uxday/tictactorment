@@ -52,8 +52,11 @@ class Config extends Component {
                 type='text'
                 min='1'
                 size='1'
+                autoFocus={true}
               />
-              <button id='amount-btn' onClick={this.setPlayerAmount}>
+              <button id='amount-btn'
+                onClick={this.setPlayerAmount}
+              >
                 CONFIRM
               </button>
             </div>
