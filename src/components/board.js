@@ -153,6 +153,7 @@ class Board extends Component {
       }
     }
 
+    // Endgame logic
     let isItOver = () => {
       if (this.props.board[0] !== '' &&
       this.props.board[0] === this.props.board[1] &&
@@ -240,7 +241,6 @@ class Board extends Component {
         // Mark cell and switch active player
       }
       isItOver()
-      // Victory logic...
     }
   }
 

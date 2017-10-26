@@ -122,6 +122,7 @@ class App extends Component {
         />
 
         <Results
+          totalPlayers={this.state.totalPlayers}
           gameOver={this.state.gameOver}
           getInitialState={this.getInitialState}
         />
