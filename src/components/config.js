@@ -5,7 +5,6 @@ class Config extends Component {
     super(props)
 
     this.configClick = this.configClick.bind(this)
-    this.setPlayerAmount = this.setPlayerAmount.bind(this)
   }
 
   configClick(event) {
@@ -21,19 +20,7 @@ class Config extends Component {
       this.props.setConfig(play1sym, play2sym)
       console.log(this.props.totalPlayers)
       // Sets state.symbolsSet to 'yes', ends config
-      // *ADD CONFIG OPTION FOR ONE/TWO PLAYER GAMES*
       this.props.start()
-    }
-  }
-
-  setPlayerAmount() {
-    var pTotal = document.getElementById('playerAmount')
-    var numOfPlayers = pTotal.value
-
-    if (numOfPlayers === '1' || numOfPlayers === '2') {
-      this.props.setTotalPlayers(numOfPlayers)
-    } else {
-      alert('ENTER 1 OR 2')
     }
   }
 
