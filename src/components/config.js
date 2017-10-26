@@ -43,21 +43,14 @@ class Config extends Component {
         <div className='row'>
           <div className='config'>
             <div className='player-set'>
-              <label htmlFor='playerAmount' id='total-players'>
+              <label id='how-many'>
                 HOW MANY HUMAN CONTESTANTS?
               </label>
-              <input
-                id='playerAmount'
-                className='form-control'
-                type='text'
-                min='1'
-                size='1'
-                autoFocus={true}
-              />
-              <button id='amount-btn'
-                onClick={this.setPlayerAmount}
-              >
-                CONFIRM
+              <button id='set-players' onClick={this.props.set1Player}>
+                1
+              </button>
+              <button id='set-players' onClick={this.props.set2Player}>
+                2
               </button>
             </div>
           </div>

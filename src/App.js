@@ -12,7 +12,6 @@ class App extends Component {
     this.state = {
       totalPlayers: '0',
       symbolsSet: 'no',
-      // Add state key for totalPlayers: (1 or 2)
       player1symbol: '',
       player2symbol: '',
       active: '',
@@ -22,7 +21,8 @@ class App extends Component {
       ],
       turnCounter: 1,
     }
-    this.setTotalPlayers = this.setTotalPlayers.bind(this)
+    this.set1Player = this.set1Player.bind(this)
+    this.set2Player = this.set2Player.bind(this)
     this.setConfig = this.setConfig.bind(this)
     this.start = this.start.bind(this)
     this.mark = this.mark.bind(this)
@@ -30,11 +30,18 @@ class App extends Component {
     this.wingame = this.wingame.bind(this)
     this.tiegame = this.tiegame.bind(this)
     this.getInitialState = this.getInitialState.bind(this)
+    this.getRematch = this.getRematch.bind(this)
   }
 
-  setTotalPlayers(num) {
+  set1Player() {
     this.setState({
-      totalPlayers: num,
+      totalPlayers: '1',
+    })
+  }
+  
+  set2Player() {
+    this.setState({
+      totalPlayers: '2',
     })
   }
 
@@ -94,6 +101,18 @@ class App extends Component {
     })
   }
 
+  getRematch() {
+    this.setState({
+      symbolsSet: 'yes',
+      active: this.state.player1symbol,
+      gameOver: 'no',
+      board: [
+        '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
+      ],
+      turnCounter: 1,
+    })
+  }
+
   render() {
     return (
       <div className='App'>
@@ -114,7 +133,8 @@ class App extends Component {
         />
 
         <Config
-          setTotalPlayers={this.setTotalPlayers}
+          set1Player={this.set1Player}
+          set2Player={this.set2Player}
           setConfig = {this.setConfig}
           start={this.start}
           totalPlayers={this.state.totalPlayers}
@@ -125,6 +145,7 @@ class App extends Component {
           totalPlayers={this.state.totalPlayers}
           gameOver={this.state.gameOver}
           getInitialState={this.getInitialState}
+          getRematch={this.getRematch}
         />
 
       </div>

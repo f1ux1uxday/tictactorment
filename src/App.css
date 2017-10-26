@@ -80,6 +80,27 @@ label {
   color: #990099
 }
 
+#how-many {
+  padding-bottom: 3.75%;
+}
+
+.player-set {
+  display: flex;
+  flex-direction: column;
+}
+
+#set-players {
+  background-color: #111;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: bold;
+  font-size: .75rem;
+  color: white;
+  padding: 8px;
+  width: 30%;
+  margin: auto;
+
+}
+
 input {
   font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
