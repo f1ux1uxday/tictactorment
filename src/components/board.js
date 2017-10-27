@@ -142,6 +142,7 @@ class Board extends Component {
             this.props.board[blockCell] = this.props.player2symbol
             this.props.mark1P()
             marked = true
+            return
           }
         }
       }
@@ -158,7 +159,11 @@ class Board extends Component {
       if (this.props.board[0] !== '' &&
       this.props.board[0] === this.props.board[1] &&
       this.props.board[0] === this.props.board[2] &&
-      this.props.board[0] === this.props.board[3]) {
+        this.props.board[0] === this.props.board[3]) {
+        // Create 'winner' key in state object
+        // with value of this.props.board[0]
+        // to trigger different dialogue options in 1P
+        // i.e. 'You Lost' or 'You Win'
         this.props.wingame()
       } else if (this.props.board[4] !== '' &&
       this.props.board[4] === this.props.board[5] &&
