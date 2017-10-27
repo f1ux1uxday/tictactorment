@@ -33,12 +33,14 @@ class Config extends Component {
               <label id='how-many'>
                 HOW MANY HUMAN CONTESTANTS?
               </label>
-              <button id='set-players' onClick={this.props.set1Player}>
-                1
-              </button>
-              <button id='set-players' onClick={this.props.set2Player}>
-                2
-              </button>
+              <div id='button-row'>
+                <button id='set-players' onClick={this.props.set1Player}>
+                  1
+                </button>
+                <button id='set-players' onClick={this.props.set2Player}>
+                  2
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -58,6 +60,7 @@ class Config extends Component {
                   className='form-control'
                   type='text'
                   min='1'
+                  maxLength='1'
                   size='1'
                   defaultValue= 'X'
                 />
@@ -72,15 +75,15 @@ class Config extends Component {
                   className='form-control'
                   type='text'
                   min='1'
+                  maxLength='1'
                   size='1'
                   defaultValue= 'O'
                 />
               </div>
-
+            </div>
               <button id='ready' onClick={this.configClick}>
                 CONFIRM INSIGNIA
               </button>
-            </div>
           </div>
         </div>
       )

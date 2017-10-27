@@ -38,7 +38,7 @@ class App extends Component {
       totalPlayers: '1',
     })
   }
-  
+
   set2Player() {
     this.setState({
       totalPlayers: '2',

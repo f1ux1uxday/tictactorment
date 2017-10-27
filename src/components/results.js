@@ -10,7 +10,7 @@ class Results extends Component {
       this.props.totalPlayers === '1') {
       return (
         <div className='results'>
-          <h1>YOU HAVE BEEN DEFEATED.</h1>
+          <h1 id='endgame-text'>YOU HAVE BEEN DEFEATED.</h1>
           <button id='reset' onClick={this.props.getRematch}>
             REMATCH
           </button>
@@ -24,7 +24,7 @@ class Results extends Component {
         this.props.totalPlayers === '2') {
       return (
         <div className='results'>
-          <h1>FATAL VICTORY. LOSER DIES.</h1>
+          <h1 id='endgame-text'>FATAL VICTORY. LOSER DIES.</h1>
           <button id='reset' onClick={this.props.getRematch}>
             REMATCH
           </button>
@@ -38,7 +38,7 @@ class Results extends Component {
         this.props.totalPlayers === '1') {
       return (
         <div className='results'>
-          <h1>YOU LIVE TO FIGHT ANOTHER DAY.</h1>
+          <h1 id='endgame-text'>YOU LIVE TO FIGHT ANOTHER DAY.</h1>
           <button id='reset' onClick={this.props.getRematch}>
             REMATCH
           </button>
@@ -52,7 +52,7 @@ class Results extends Component {
         this.props.totalPlayers === '2') {
       return (
         <div className='results'>
-          <h1>EACH PLAYER SURVIVES... BARELY.</h1>
+          <h1 id='endgame-text'>EACH PLAYER SURVIVES... BARELY.</h1>
           <button id='reset' onClick={this.props.getRematch}>
             REMATCH
           </button>

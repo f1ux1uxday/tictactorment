@@ -159,7 +159,7 @@ and (orientation : landscape) {
   .board {
     width: 184px;
     height: 184px;
-    margin-top: 10px
+    margin-top: 20px
   }
 
   .square {
@@ -169,7 +169,31 @@ and (orientation : landscape) {
   }
 
   .config {
-    margin: 0px
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 33%;
+    /* margin: auto; */
+  }
+
+  #button-row {
+    width: 50%;
+    margin: auto;
+    margin-top: -1.7%;
+  }
+
+  #set-players {
+    font-size: .5rem;
+    padding: 4px;
+    margin: auto;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: -1%;
+    padding-bottom: 10px;
   }
 
   label {
@@ -190,7 +214,8 @@ and (orientation : landscape) {
     text-align: center;
     background-color: #333;
     color: #4dffc3;
-    margin-left: 5px
+    margin-left: 6px;
+    margin-right: 6px;
   }
 
   #ready {
@@ -199,8 +224,18 @@ and (orientation : landscape) {
     font-size: .5rem;
     background-color: #111;
     color: #ddd;
-    padding: 2px 3px;
-    margin: 0px;
+    padding: 4px 10px;
+    width: 20%;
+    margin: auto;
+  }
+
+  #endgame-text {
+    font-size: .75rem;
+  }
+
+  #reset {
+    font-size: .45rem;
+    padding: 4px 11px;
   }
 }
 
@@ -225,26 +260,35 @@ and (orientation : portrait) {
   }
 
   .board {
-    width: 224px;
-    height: 184px;
+    width: 280px;
+    height: 280px;
     margin-top: 75px;
     margin-bottom: 40px
   }
 
   .square {
-    height:56px;
-    width: 56px;
-    font-size: 2em;
+    height: 70px;
+    width: 70px;
+    font-size: 3.75em;
   }
 
   .config {
-    margin-top: 45px
+    margin-top: -12.5%;
   }
 
   label {
     display:inline;
     font-size: .75rem;
-    margin-top: 15px
+    margin-top: 14%;
+  }
+
+  #how-many {
+    margin-top: 7.5%;
+  }
+
+  .ok {
+    display: flex;
+    margin: auto;
   }
 
   input {
@@ -254,8 +298,8 @@ and (orientation : portrait) {
     text-align: center;
     background-color: #333;
     color: #4dffc3;
-    margin-top: 10px;
-    margin-bottom: 5px;
+    margin-top: 17px;
+    margin-bottom: 4px;
     margin-left: 5px;
   }
 
@@ -265,19 +309,314 @@ and (orientation : portrait) {
     font-size: .75rem;
     background-color: #111;
     color: #ddd;
-    padding: 2px 3px;
+    padding: 4px 5px;
     margin: 10px;
+    margin-top: 7.5%;
   }
 
   .results {
-    font-size: .55rem;
-    margin-top: 57px;
+    font-size: .45rem;
+    margin-top: -7.5%;
   }
 
   #reset {
     font-size: .75rem;
-    padding: 5px;
+    padding: 4px 5px;
     margin-top: 5px
   }
 
+}
+
+@media only screen
+and (min-device-width : 360px)
+and (max-device-width : 667px)
+and (orientation : landscape) {
+  .App-logo {
+    height: 45px;
+  }
+
+  .App-header {
+    height: 38px;
+    margin-top: 1%;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 200px;
+    height: 200px;
+    margin-top: 6.66%;
+  }
+
+  .square {
+    height: 50px;
+    width: 50px;
+    font-size: 2em;
+  }
+
+  .config {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 33%;
+    /* margin: auto; */
+  }
+
+  #button-row {
+    width: 50%;
+    margin: auto;
+    margin-top: -1.7%;
+  }
+
+  #set-players {
+    font-size: .5rem;
+    padding: 4px;
+    margin: auto;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: -1%;
+    padding-bottom: 10px;
+  }
+
+  label {
+    display:inline;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .6rem;
+    text-shadow: .25px .25px 75px #ddd;
+    color: #990099
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .4rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .5rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 4px 10px;
+    width: 20%;
+    margin: auto;
+  }
+
+  #endgame-text {
+    font-size: .75rem;
+  }
+
+  #reset {
+    font-size: .45rem;
+    padding: 4px 11px;
+  }
+}
+
+@media only screen
+and (min-device-width : 360px)
+and (max-device-width : 667px)
+and (orientation : portrait) {
+  .App-logo {
+    height: 75px;
+  }
+
+  .App-header {
+    height: 58px;
+    margin-top: 45px;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 1px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 280px;
+    height: 280px;
+    margin-top: 75px;
+    margin-bottom: 40px
+  }
+
+  .square {
+    height: 70px;
+    width: 70px;
+    font-size: 3.75em;
+  }
+
+  .config {
+    margin-top: -12.5%;
+  }
+
+  label {
+    display:inline;
+    font-size: .75rem;
+    margin-top: 14%;
+  }
+
+  #how-many {
+    margin-top: 7.5%;
+  }
+
+  .ok {
+    display: flex;
+    margin: auto;
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .6rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-top: 17px;
+    margin-bottom: 4px;
+    margin-left: 5px;
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .75rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 4px 5px;
+    margin: 10px;
+    margin-top: 7.5%;
+  }
+
+  .results {
+    font-size: .45rem;
+    margin-top: -7.5%;
+  }
+
+  #reset {
+    font-size: .75rem;
+    padding: 4px 5px;
+    margin-top: 5px
+  }
+
+}
+
+@media only screen
+and (min-device-width : 412px)
+and (max-device-width : 736px)
+and (orientation : landscape) {
+  .App-logo {
+    height: 50px;
+  }
+
+  .App-header {
+    height: 38px;
+    margin-top: 1%;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 248px;
+    height: 248px;
+    margin-top: 7.25%;
+  }
+
+  .square {
+    height: 62px;
+    width: 62px;
+    font-size: 3.3em;
+  }
+
+  .config {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 33%;
+    /* margin: auto; */
+  }
+
+  #button-row {
+    width: 50%;
+    margin: auto;
+    margin-top: -1.7%;
+  }
+
+  #set-players {
+    font-size: .5rem;
+    padding: 4px;
+    margin: auto;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: -.5%;
+    padding-bottom: 10px;
+  }
+
+  label {
+    display:inline;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .6rem;
+    text-shadow: .25px .25px 75px #ddd;
+    color: #990099
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .66rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .5rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 4px 10px;
+    width: 20%;
+    margin: auto;
+  }
+
+  #endgame-text {
+    font-size: .75rem;
+  }
+
+  #reset {
+    font-size: .45rem;
+    padding: 4px 11px;
+  }
 }
