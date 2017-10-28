@@ -620,3 +620,356 @@ and (orientation : landscape) {
     padding: 4px 11px;
   }
 }
+
+@media only screen
+and (min-device-width : 412px)
+and (max-device-width : 736px)
+and (orientation : portrait) {
+  .App-logo {
+    height: 85px;
+  }
+
+  .App-header {
+    height: 58px;
+    margin-top: 15%;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-top: 1px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 344px;
+    height: 344px;
+    margin-top: 20%;
+  }
+
+  .square {
+    height: 86px;
+    width: 86px;
+    font-size: 3.75em;
+  }
+
+  .config {
+    margin-top: -8%;
+  }
+
+  label {
+    display:inline;
+    font-size: .75rem;
+    margin-top: 14%;
+  }
+
+  #how-many {
+    margin-top: 10%;
+  }
+
+  .ok {
+    display: flex;
+    margin: auto;
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .6rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-top: 17px;
+    margin-bottom: 4px;
+    margin-left: 5px;
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: .75rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 4px 5px;
+    margin: 10px;
+    margin-top: 7.5%;
+  }
+
+  .results {
+    font-size: .45rem;
+    margin-top: -3.5%;
+  }
+
+  #reset {
+    font-size: .75rem;
+    padding: 4px 5px;
+    margin-top: 5px
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1366px)
+and (orientation : landscape) {
+  .App-logo {
+    height: 100px;
+  }
+
+  .App-header {
+    height: 88px;
+    margin-top: 1.5%;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 3.2rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 660px;
+    height: 660px;
+    margin-top: 6.66%;
+  }
+
+  .square {
+    height: 165px;
+    width: 165px;
+    font-size: 10em;
+  }
+
+  .config {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 33%;
+    /* margin: auto; */
+  }
+
+  #button-row {
+    width: 50%;
+    margin: auto;
+    margin-top: -1.7%;
+  }
+
+  #set-players {
+    font-size: 1.5rem;
+    padding: 4px;
+    margin: auto;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: .5%;
+    padding-bottom: 1.5%;
+  }
+
+  label {
+    display:inline;
+    /*flex-direction: row;
+    flex-wrap: wrap;*/
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-shadow: .25px .25px 75px #ddd;
+    color: #990099
+  }
+
+  #how-many {
+    font-size: 1.75rem;
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 5px 15px;
+    width: 20%;
+    margin: auto;
+  }
+
+  #endgame-text {
+    font-size: 1.75rem;
+  }
+
+  #reset {
+    font-size: 1.45rem;
+    padding: 4px 11px;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape) {
+  .App-logo {
+    height: 65px;
+  }
+
+  h2 {
+    font-size: 2.75rem;
+  }
+
+  .board {
+    width: 504px;
+    height: 504px;
+    margin-top: 4.75%;
+  }
+
+  .square {
+    width: 126px;
+    height: 126px;
+    font-size: 8rem;
+  }
+
+  #how-many {
+    font-size: 1.5rem;
+  }
+
+  #button-row {
+    margin-top: -2.75%;
+  }
+
+  #set-players {
+    font-size: 1rem;
+  }
+
+  label {
+    font-size: 1.25rem;
+  }
+
+  input {
+    font-size: 1.25rem;
+  }
+
+  #ready {
+    font-size: 1rem;
+    margin-top: -.5%;
+    margin-bottom: 1.75%;
+    width: 25%;
+  }
+
+  .results {
+    margin-top: -0.5%;
+  }
+
+  #endgame-text {
+    font-size: 1.5rem;
+  }
+
+  #reset {
+    font-size: 1rem;
+    margin-top: -.5%;
+  }
+}
+
+@media only screen
+and (min-device-width : 769px)
+and (max-device-width : 1366px)
+and (orientation : portrait) {
+  .App-logo {
+    height: 150px;
+  }
+
+  .App-header {
+    height: 58px;
+    margin-top: 8%;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 4.2rem;
+    margin-top: 1px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 736px;
+    height: 736px;
+    margin-top: 20%;
+  }
+
+  .square {
+    height: 184px;
+    width: 184px;
+    font-size: 10rem;
+  }
+
+  .config {
+    margin-top: -3%;
+  }
+
+  #button-row {
+    margin-top: 3%;
+  }
+
+  #set-players {
+    font-size: 1.75rem;
+  }
+
+  label {
+    display:inline;
+    font-size: 1.75rem;
+    margin-top: 25%;
+  }
+
+  #how-many {
+    font-size: 2rem;
+    margin-top: 13.5%;
+  }
+
+  .ok {
+    display: flex;
+    margin: auto;
+  }
+
+  input {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    text-align: center;
+    background-color: #333;
+    color: #4dffc3;
+    margin-top: 27%;
+    margin-bottom: 4px;
+    margin-left: 5px;
+  }
+
+  #ready {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: bold;
+    font-size: 1.75rem;
+    background-color: #111;
+    color: #ddd;
+    padding: 2px 15px;
+    margin: 10px;
+    margin-top: 8.5%;
+  }
+
+  .results {
+    font-size: 1.45rem;
+    margin-top: -0%;
+  }
+
+  #reset {
+    font-size: 1.75rem;
+    padding: 8px 15px;
+    margin-top: 5px
+  }
+}
