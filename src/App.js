@@ -20,6 +20,7 @@ class App extends Component {
         '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       ],
       turnCounter: 1,
+      winner: 'none',
     }
     this.set1Player = this.set1Player.bind(this)
     this.set2Player = this.set2Player.bind(this)
@@ -29,6 +30,7 @@ class App extends Component {
     this.mark1P = this.mark1P.bind(this)
     this.wingame = this.wingame.bind(this)
     this.tiegame = this.tiegame.bind(this)
+    this.getWinner = this.getWinner.bind(this)
     this.getInitialState = this.getInitialState.bind(this)
     this.getRematch = this.getRematch.bind(this)
   }
@@ -86,6 +88,12 @@ class App extends Component {
     })
   }
 
+  getWinner(symbol) {
+    this.setState({
+      winner: symbol,
+    })
+  }
+
   getInitialState() {
     this.setState({
       totalPlayers: '0',
@@ -98,6 +106,7 @@ class App extends Component {
         '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       ],
       turnCounter: 1,
+      winner: 'none',
     })
   }
 
@@ -110,6 +119,7 @@ class App extends Component {
         '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '',
       ],
       turnCounter: 1,
+      winner: 'none',
     })
   }
 
@@ -126,10 +136,12 @@ class App extends Component {
           active={this.state.active}
           gameOver={this.state.gameOver}
           turnCounter={this.state.turnCounter}
+          winner={this.state.winner}
           mark={this.mark}
           mark1P={this.mark1P}
           wingame={this.wingame}
           tiegame={this.tiegame}
+          getWinner={this.getWinner}
         />
 
         <Config
@@ -143,7 +155,10 @@ class App extends Component {
 
         <Results
           totalPlayers={this.state.totalPlayers}
+          player1symbol={this.state.player1symbol}
+          player2symbol={this.state.player2symbol}
           gameOver={this.state.gameOver}
+          winner={this.state.winner}
           getInitialState={this.getInitialState}
           getRematch={this.getRematch}
         />

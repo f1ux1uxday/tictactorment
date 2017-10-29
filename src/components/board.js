@@ -159,56 +159,62 @@ class Board extends Component {
       if (this.props.board[0] !== '' &&
       this.props.board[0] === this.props.board[1] &&
       this.props.board[0] === this.props.board[2] &&
-        this.props.board[0] === this.props.board[3]) {
-        // Create 'winner' key in state object
-        // with value of this.props.board[0]
-        // to trigger different dialogue options in 1P
-        // i.e. 'You Lost' or 'You Win'
+      this.props.board[0] === this.props.board[3]) {
+        this.props.getWinner(this.props.board[0])
         this.props.wingame()
       } else if (this.props.board[4] !== '' &&
       this.props.board[4] === this.props.board[5] &&
       this.props.board[4] === this.props.board[6] &&
       this.props.board[4] === this.props.board[7]) {
+        this.props.getWinner(this.props.board[0])
         this.props.wingame()
       } else if (this.props.board[8] !== '' &&
       this.props.board[8] === this.props.board[9] &&
       this.props.board[8] === this.props.board[10] &&
       this.props.board[8] === this.props.board[11]) {
+        this.props.getWinner(this.props.board[4])
         this.props.wingame()
       } else if (this.props.board[12] !== '' &&
       this.props.board[12] === this.props.board[13] &&
       this.props.board[12] === this.props.board[14] &&
       this.props.board[12] === this.props.board[15]) {
+        this.props.getWinner(this.props.board[12])
         this.props.wingame()
       } else if (this.props.board[0] !== '' &&
       this.props.board[0] === this.props.board[4] &&
       this.props.board[0] === this.props.board[8] &&
       this.props.board[0] === this.props.board[12]) {
+        this.props.getWinner(this.props.board[0])
         this.props.wingame()
       } else if (this.props.board[1] !== '' &&
       this.props.board[1] === this.props.board[5] &&
       this.props.board[1] === this.props.board[9] &&
       this.props.board[1] === this.props.board[13]) {
+        this.props.getWinner(this.props.board[1])
         this.props.wingame()
       } else if (this.props.board[2] !== '' &&
       this.props.board[2] === this.props.board[6] &&
       this.props.board[2] === this.props.board[10] &&
       this.props.board[2] === this.props.board[14]) {
+        this.props.getWinner(this.props.board[2])
         this.props.wingame()
       } else if (this.props.board[3] !== '' &&
       this.props.board[3] === this.props.board[7] &&
       this.props.board[3] === this.props.board[11] &&
       this.props.board[3] === this.props.board[15]) {
+        this.props.getWinner(this.props.board[3])
         this.props.wingame()
       } else if (this.props.board[0] !== '' &&
       this.props.board[0] === this.props.board[5] &&
       this.props.board[0] === this.props.board[10] &&
       this.props.board[0] === this.props.board[15]) {
+        this.props.getWinner(this.props.board[0])
         this.props.wingame()
       } else if (this.props.board[3] !== '' &&
       this.props.board[3] === this.props.board[6] &&
       this.props.board[3] === this.props.board[9] &&
       this.props.board[3] === this.props.board[12]) {
+        this.props.getWinner(this.props.board[3])
         this.props.wingame()
       } else if (this.props.board.indexOf('') === -1) {
         this.props.tiegame()
