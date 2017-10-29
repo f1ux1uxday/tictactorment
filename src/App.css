@@ -70,9 +70,6 @@ h2 {
 }
 
 label {
-  /*display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;*/
   font-family: 'Noto Sans', sans-serif;
   font-weight: bold;
   font-size: 1rem;
@@ -137,8 +134,7 @@ input {
 }
 
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
+and (min-device-width : 567px)
 and (orientation : landscape) {
   .App-logo {
     height: 0px;
@@ -169,11 +165,8 @@ and (orientation : landscape) {
   }
 
   .config {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 33%;
-    /* margin: auto; */
   }
 
   #button-row {
@@ -198,32 +191,17 @@ and (orientation : landscape) {
 
   label {
     display:inline;
-    /*flex-direction: row;
-    flex-wrap: wrap;*/
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .6rem;
-    text-shadow: .25px .25px 75px #ddd;
-    color: #990099
   }
 
   input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .4rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
     margin-left: 6px;
     margin-right: 6px;
   }
 
   #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .5rem;
-    background-color: #111;
-    color: #ddd;
     padding: 4px 10px;
     width: 20%;
     margin: auto;
@@ -292,23 +270,14 @@ and (orientation : portrait) {
   }
 
   input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .6rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
     margin-top: 17px;
     margin-bottom: 4px;
     margin-left: 5px;
   }
 
   #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .75rem;
-    background-color: #111;
-    color: #ddd;
     padding: 4px 5px;
     margin: 10px;
     margin-top: 7.5%;
@@ -328,23 +297,14 @@ and (orientation : portrait) {
 }
 
 @media only screen
-and (min-device-width : 360px)
-and (max-device-width : 667px)
+and (min-device-width : 640px)
 and (orientation : landscape) {
   .App-logo {
     height: 45px;
   }
 
   .App-header {
-    height: 38px;
     margin-top: 1%;
-    margin-bottom: 0px;
-  }
-
-  h2 {
-    font-size: 1.2rem;
-    margin-top: 0px;
-    margin-bottom: 10px;
   }
 
   .board {
@@ -360,11 +320,8 @@ and (orientation : landscape) {
   }
 
   .config {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 33%;
-    /* margin: auto; */
   }
 
   #button-row {
@@ -376,7 +333,6 @@ and (orientation : landscape) {
   #set-players {
     font-size: .5rem;
     padding: 4px;
-    margin: auto;
   }
 
   .form-group {
@@ -389,32 +345,17 @@ and (orientation : landscape) {
 
   label {
     display:inline;
-    /*flex-direction: row;
-    flex-wrap: wrap;*/
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .6rem;
-    text-shadow: .25px .25px 75px #ddd;
-    color: #990099
   }
 
   input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .4rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
     margin-left: 6px;
     margin-right: 6px;
   }
 
   #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .5rem;
-    background-color: #111;
-    color: #ddd;
     padding: 4px 10px;
     width: 20%;
     margin: auto;
@@ -483,23 +424,14 @@ and (orientation : portrait) {
   }
 
   input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .6rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
     margin-top: 17px;
     margin-bottom: 4px;
     margin-left: 5px;
   }
 
   #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .75rem;
-    background-color: #111;
-    color: #ddd;
     padding: 4px 5px;
     margin: 10px;
     margin-top: 7.5%;
@@ -519,8 +451,7 @@ and (orientation : portrait) {
 }
 
 @media only screen
-and (min-device-width : 412px)
-and (max-device-width : 736px)
+and (min-device-width : 732px)
 and (orientation : landscape) {
   .App-logo {
     height: 50px;
@@ -551,17 +482,14 @@ and (orientation : landscape) {
   }
 
   .config {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 33%;
-    /* margin: auto; */
   }
 
   #button-row {
     width: 50%;
     margin: auto;
-    margin-top: -1.7%;
+    margin-top: -2.5%;
   }
 
   #set-players {
@@ -580,32 +508,17 @@ and (orientation : landscape) {
 
   label {
     display:inline;
-    /*flex-direction: row;
-    flex-wrap: wrap;*/
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .6rem;
-    text-shadow: .25px .25px 75px #ddd;
-    color: #990099
   }
 
   input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .66rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
     margin-left: 6px;
     margin-right: 6px;
   }
 
   #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .5rem;
-    background-color: #111;
-    color: #ddd;
     padding: 4px 10px;
     width: 20%;
     margin: auto;
@@ -673,23 +586,14 @@ and (orientation : portrait) {
   }
 
   input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .6rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
     margin-top: 17px;
     margin-bottom: 4px;
     margin-left: 5px;
   }
 
   #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: .75rem;
-    background-color: #111;
-    color: #ddd;
     padding: 4px 5px;
     margin: 10px;
     margin-top: 7.5%;
@@ -708,115 +612,7 @@ and (orientation : portrait) {
 }
 
 @media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1366px)
-and (orientation : landscape) {
-  .App-logo {
-    height: 100px;
-  }
-
-  .App-header {
-    height: 88px;
-    margin-top: 1.5%;
-    margin-bottom: 0px;
-  }
-
-  h2 {
-    font-size: 3.2rem;
-    margin-top: 0px;
-    margin-bottom: 10px;
-  }
-
-  .board {
-    width: 660px;
-    height: 660px;
-    margin-top: 6.66%;
-  }
-
-  .square {
-    height: 165px;
-    width: 165px;
-    font-size: 10em;
-  }
-
-  .config {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 33%;
-    /* margin: auto; */
-  }
-
-  #button-row {
-    width: 50%;
-    margin: auto;
-    margin-top: -1.7%;
-  }
-
-  #set-players {
-    font-size: 1.5rem;
-    padding: 4px;
-    margin: auto;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    margin-top: .5%;
-    padding-bottom: 1.5%;
-  }
-
-  label {
-    display:inline;
-    /*flex-direction: row;
-    flex-wrap: wrap;*/
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    text-shadow: .25px .25px 75px #ddd;
-    color: #990099
-  }
-
-  #how-many {
-    font-size: 1.75rem;
-  }
-
-  input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.4rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
-    margin-left: 6px;
-    margin-right: 6px;
-  }
-
-  #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
-    font-size: 1.5rem;
-    background-color: #111;
-    color: #ddd;
-    padding: 5px 15px;
-    width: 20%;
-    margin: auto;
-  }
-
-  #endgame-text {
-    font-size: 1.75rem;
-  }
-
-  #reset {
-    font-size: 1.45rem;
-    padding: 4px 11px;
-  }
-}
-
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
+and (min-device-width : 1024px)
 and (orientation : landscape) {
   .App-logo {
     height: 65px;
@@ -829,7 +625,7 @@ and (orientation : landscape) {
   .board {
     width: 504px;
     height: 504px;
-    margin-top: 4.75%;
+    margin-top: 9%;
   }
 
   .square {
@@ -940,23 +736,14 @@ and (orientation : portrait) {
   }
 
   input {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: 1.25rem;
-    text-align: center;
-    background-color: #333;
-    color: #4dffc3;
     margin-top: 27%;
     margin-bottom: 4px;
     margin-left: 5px;
   }
 
   #ready {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: bold;
     font-size: 1.75rem;
-    background-color: #111;
-    color: #ddd;
     padding: 2px 15px;
     margin: 10px;
     margin-top: 8.5%;
@@ -973,3 +760,100 @@ and (orientation : portrait) {
     margin-top: 5px
   }
 }
+
+@media only screen
+and (min-device-width : 1367px)
+and (orientation : landscape) {
+  .App-logo {
+    height: 100px;
+  }
+
+  .App-header {
+    height: 75px;
+    margin-top: .75%;
+    margin-bottom: 0px;
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .board {
+    width: 660px;
+    height: 660px;
+    margin-top: 5.5%;
+  }
+
+  .square {
+    height: 165px;
+    width: 165px;
+    font-size: 10em;
+  }
+
+  .config {
+    flex-direction: column;
+    height: 33%;
+  }
+
+  #button-row {
+    width: 50%;
+    margin: auto;
+    margin-top: -3%;
+  }
+
+  #set-players {
+    font-size: 1.25rem;
+    padding: 4px;
+    margin: auto;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-top: .5%;
+    padding-bottom: 1.5%;
+  }
+
+  label {
+    display:inline;
+    font-size: 1.5rem;
+    text-shadow: .25px .25px 75px #ddd;
+  }
+
+  #how-many {
+    font-size: 1.75rem;
+    margin-top: .6%;
+  }
+
+  input {
+    font-size: 1.4rem;
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+
+  #ready {
+    font-size: 1.25rem;
+    padding: 5px 15px;
+    width: 20%;
+    margin: auto;
+    margin-top: -.5%;
+  }
+
+  .results {
+    margin-top: .8%;
+  }
+
+  #endgame-text {
+    font-size: 1.75rem;
+  }
+
+  #reset {
+    font-size: 1.25rem;
+    padding: 4px 11px;
+    margin-top: 0%;
+  }
+}
+
