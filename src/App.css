@@ -845,6 +845,6 @@ and (orientation : landscape) {
   #reset {
     font-size: 1.25rem;
     padding: 4px 11px;
-    margin-top: 0%;
+    margin-top: -.5%;
   }
 }
