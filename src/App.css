@@ -817,7 +817,7 @@ and (orientation : landscape) {
 
   #how-many {
     font-size: 1.75rem;
-    margin-top: .6%;
+    margin-top: .5%;
   }
 
   input {
@@ -835,10 +835,11 @@ and (orientation : landscape) {
   }
 
   .results {
-    margin-top: .8%;
+    margin-top: .5%;
   }
 
   #endgame-text {
+    margin-top: .5%;
     font-size: 1.75rem;
   }
 
