@@ -617,7 +617,7 @@ and (orientation : landscape) {
   .board {
     width: 504px;
     height: 504px;
-    margin-top: 8%;
+    margin-top: 7%;
   }
 
   .square {
