@@ -18,7 +18,7 @@ html {
   background-color: #111;
   height: 150px;
   margin-top: 5px;
-  margin-bottom: 55px;
+  margin-bottom: 10%;
 }
 
 h2 {
@@ -615,14 +615,14 @@ and (orientation : landscape) {
   }
 
   .board {
-    width: 488px;
-    height: 488px;
+    width: 472px;
+    height: 472px;
     margin-top: 7%;
   }
 
   .square {
-    width: 122px;
-    height: 122px;
+    width: 118px;
+    height: 118px;
     font-size: 8rem;
   }
 
