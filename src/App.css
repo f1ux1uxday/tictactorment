@@ -615,14 +615,14 @@ and (orientation : landscape) {
   }
 
   .board {
-    width: 504px;
-    height: 504px;
+    width: 488px;
+    height: 488px;
     margin-top: 7%;
   }
 
   .square {
-    width: 126px;
-    height: 126px;
+    width: 122px;
+    height: 122px;
     font-size: 8rem;
   }
 
