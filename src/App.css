@@ -623,7 +623,7 @@ and (orientation : landscape) {
   .square {
     width: 118px;
     height: 118px;
-    font-size: 7.75rem;
+    font-size: 6.5rem;
   }
 
   #how-many {
