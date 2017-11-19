@@ -41,7 +41,7 @@ class Results extends Component {
       this.props.winner === this.props.player1symbol) {
       return (
         <div className='results'>
-          <h1 id='endgame-text'>CONTESTANT TWO IS DEAD.</h1>
+          <h1 id='endgame-text'>{this.props.player2symbol} IS DEAD.</h1>
           <button id='reset' onClick={this.props.getRematch}>
             REMATCH
           </button>
@@ -56,7 +56,7 @@ class Results extends Component {
       this.props.winner === this.props.player2symbol) {
       return (
         <div className='results'>
-          <h1 id='endgame-text'>CONTESTANT ONE HAS BEEN SLAIN.</h1>
+          <h1 id='endgame-text'>{this.props.player1symbol} HAS BEEN SLAIN.</h1>
           <button id='reset' onClick={this.props.getRematch}>
             REMATCH
           </button>
