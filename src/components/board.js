@@ -166,13 +166,13 @@ class Board extends Component {
       this.props.board[4] === this.props.board[5] &&
       this.props.board[4] === this.props.board[6] &&
       this.props.board[4] === this.props.board[7]) {
-        this.props.getWinner(this.props.board[0])
+        this.props.getWinner(this.props.board[4])
         this.props.wingame()
       } else if (this.props.board[8] !== '' &&
       this.props.board[8] === this.props.board[9] &&
       this.props.board[8] === this.props.board[10] &&
       this.props.board[8] === this.props.board[11]) {
-        this.props.getWinner(this.props.board[4])
+        this.props.getWinner(this.props.board[8])
         this.props.wingame()
       } else if (this.props.board[12] !== '' &&
       this.props.board[12] === this.props.board[13] &&

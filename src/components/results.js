@@ -39,6 +39,7 @@ class Results extends Component {
     if (this.props.gameOver === 'yes' &&
       this.props.totalPlayers === '2' &&
       this.props.winner === this.props.player1symbol) {
+      console.log(this.props.winner)
       return (
         <div className='results'>
           <h1 id='endgame-text'>{this.props.player2symbol} IS DEAD.</h1>
@@ -54,6 +55,7 @@ class Results extends Component {
     if (this.props.gameOver === 'yes' &&
       this.props.totalPlayers === '2' &&
       this.props.winner === this.props.player2symbol) {
+      console.log(this.props.winner)
       return (
         <div className='results'>
           <h1 id='endgame-text'>{this.props.player1symbol} HAS BEEN SLAIN.</h1>
